@@ -1,0 +1,41 @@
+# Dependencies
+node_modules/
+
+# Cache and Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment files
+.env
+.env.local
+.env.test.local
+.env.production.local
+
+# Editor settings
+.vscode/
+.idea/
+
+# Database files
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+dist/
+build/
+
+# Coverage reports
+coverage/
+
+# Temporary files
+*.tmp
+*.log
+
+# Generated files
+package-lock.json
+yarn.lock
