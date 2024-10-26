@@ -1,11 +1,28 @@
 import { Link } from "react-router-dom";
+import React, { useState } from 'react';
+import axios from 'axios';
 function CreateAccount() {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [isRegistering, setIsRegistering] = useState(true);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const url = isRegistering ? '/api/auth/register' : '/api/auth/login';
+    const payload = isRegistering ? { name, email, password } : { email, password };
+    try {
+      const { data } = await axios.post(url, payload);
+      console.log(data);
+    } catch (error) {
+      console.error(error.response.data);
+    }
+  };
     return (
       <div className="flex items-center justify-center pt-4 bg-gray-100  h-screen">
         <div className="w-full max-w-md p-8 space-y-6 bg-white rounded-lg shadow-lg">
           <h2 className="text-2xl font-bold text-center">Create your account</h2>
   
-          <form className="space-y-4">
+          <form className="space-y-4"  onSubmit={handleSubmit}>
             <div>
               <label className="block text-sm font-medium text-gray-700">
                 Name
