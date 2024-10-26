@@ -96,8 +96,8 @@ const Protected_page = () => {
     };
 
     return (
-        <div className="flex items-center justify-center pt-4 bg-gray-100">
-            <div className=" w-full max-w-md p-8 space-y-6 bg-white rounded-lg shadow-lg">
+        <div className="flex items-center justify-center pt-4 bg-gray-100 h-screen">
+            <div className=" w-full max-w-md p-8 space-y-2 bg-white rounded-lg shadow-lg">
                 <h2 className="text-xl font-semibold text-center">Please mark your interests!</h2>
                 <p className="text-gray-500 mb-2 text-center">We will keep you notified.</p>
 <br></br>

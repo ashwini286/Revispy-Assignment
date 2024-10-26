@@ -1,7 +1,7 @@
-
+import { Link } from "react-router-dom";
 function CreateAccount() {
     return (
-      <div className="flex items-center justify-center pt-4 bg-gray-100">
+      <div className="flex items-center justify-center pt-4 bg-gray-100  h-screen">
         <div className="w-full max-w-md p-8 space-y-6 bg-white rounded-lg shadow-lg">
           <h2 className="text-2xl font-bold text-center">Create your account</h2>
   
@@ -49,9 +49,9 @@ function CreateAccount() {
   
           <p className="text-center text-sm text-gray-600">
             Have an Account?{" "}
-            <a href="#" className="font-medium text-black hover:underline">
+            <Link to="/" className="font-medium text-black hover:underline">
               LOGIN
-            </a>
+            </Link>
           </p>
         </div>
       </div>
