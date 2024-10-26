@@ -1,6 +1,6 @@
 import express from 'express';
-import { registerUser, loginUser } from './auth.js';
-import { verifyEmail } from './emailController.js';
+import { registerUser, loginUser } from '../controllers/auth.js';
+// import { verifyEmail } from './emailController.js';
 const router = express.Router();
 
 router.post('/register', registerUser);
